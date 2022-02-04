@@ -17,7 +17,7 @@ client.on("ready", () => {
 client.on("messageCreate", async (message) => {
   try {
     const hasRole = message.member?.roles.cache.some((role) => {
-      return role.name.toLocaleLowerCase() === config.role.toLowerCase();
+      return role.name.toLowerCase() === config.role.toLowerCase();
     });
 
     if (!hasRole) return;
