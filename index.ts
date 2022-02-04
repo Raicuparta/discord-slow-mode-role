@@ -22,7 +22,7 @@ client.on("messageCreate", async (message) => {
 
     if (!hasRole) return;
 
-    await message.member?.timeout(config.timeoutSeconds * 1000, "hey");
+    await message.member?.timeout(config.timeoutSeconds * 1000);
   } catch (error) {
     console.error(error);
   }
