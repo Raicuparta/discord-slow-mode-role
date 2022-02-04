@@ -17,10 +17,10 @@ client.on("ready", () => {
 client.on("messageCreate", async (message) => {
   try {
     message.member?.roles.cache.some((role) => {
-      return role.name === "Slowmode";
+      return role.name === config.role;
     });
 
-    await message.member?.timeout(10000, "hey");
+    await message.member?.timeout(config.timeoutSeconds * 1000, "hey");
   } catch (error) {
     console.error(error);
   }

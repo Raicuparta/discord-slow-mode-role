@@ -1,3 +1,5 @@
 {
-  "token": "TOKEN_HERE"
+  "token": "TOKEN_HERE",
+  "role": "Slowmode",
+  "timeoutSeconds": 20
 }
