@@ -17,7 +17,7 @@ client.on("ready", () => {
 client.on("messageCreate", async (message) => {
   try {
     message.member?.roles.cache.some((role) => {
-      return role.name === config.role;
+      return role.name.toLocaleLowerCase() === config.role.toLowerCase();
     });
 
     await message.member?.timeout(config.timeoutSeconds * 1000, "hey");
